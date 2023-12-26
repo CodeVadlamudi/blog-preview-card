@@ -8,7 +8,7 @@ function App() {
         <Img src="./images/illustration-article.svg" alt="Image" />
         <Title>Learning</Title>
         <ContainerDate>Published 26 Dec 2023</ContainerDate>
-        <Heading>HTML & CSS foundations</Heading>
+        <Heading href="!#">HTML & CSS foundations</Heading>
         <Paragarph>
           These languages are the backbone of every website, defining structure,
           content, and presentation.
@@ -32,13 +32,19 @@ const Container = styled.main`
 `;
 
 const Flex = styled.div`
-  width: 375px;
+  width: 365px;
   background-color: hsl(0, 0%, 100%);
-  padding: 18px;
   border-radius: 10px;
   border-width: 1px;
   border-color: hsl(0, 0%, 7%);
   border-style: solid;
+  padding: 18px;
+  box-shadow: 10px 10px 0 hsl(0, 0%, 7%);
+  transition-duration: 50ms;
+
+  &:hover {
+    box-shadow: 12px 12px 0 hsl(0, 0%, 7%);
+  }
 `;
 
 const Img = styled.img`
@@ -59,9 +65,16 @@ const ContainerDate = styled.div`
   color: hsl(0, 0%, 7%);
 `;
 
-const Heading = styled.h2`
+const Heading = styled.a`
   color: hsl(0, 0%, 7%);
   font-weight: 800;
+  margin-top: 20px;
+  display: block;
+  font-size: 28px;
+
+  &:hover {
+    color: hsl(47, 88%, 63%);
+  }
 `;
 
 const Paragarph = styled.p`
@@ -77,6 +90,8 @@ const Group = styled.div`
 const Avatar = styled.img`
   display: block;
   margin-right: 10px;
+  width: 40px;
+  height: 40px;
 `;
 
 const AvatarName = styled.h4`
