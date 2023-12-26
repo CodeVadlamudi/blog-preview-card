@@ -26,13 +26,15 @@ export default App;
 
 const Container = styled.main`
   background-color: hsl(47, 88%, 63%);
-  height: 100dvb;
-  display: grid;
-  place-items: center;
+  min-height: 100dvb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 const Flex = styled.div`
-  width: 365px;
+  max-width: 365px;
+  width: 100%;
   background-color: hsl(0, 0%, 100%);
   border-radius: 10px;
   border-width: 1px;
@@ -41,6 +43,7 @@ const Flex = styled.div`
   padding: 18px;
   box-shadow: 10px 10px 0 hsl(0, 0%, 7%);
   transition-duration: 50ms;
+  margin: 20px;
 
   &:hover {
     box-shadow: 12px 12px 0 hsl(0, 0%, 7%);
@@ -70,7 +73,11 @@ const Heading = styled.a`
   font-weight: 800;
   margin-top: 20px;
   display: block;
-  font-size: 28px;
+  font-size: 20px;
+
+  @media (min-width: 375px) {
+    font-size: 24px;
+  }
 
   &:hover {
     color: hsl(47, 88%, 63%);
